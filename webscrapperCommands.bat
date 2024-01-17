@@ -1,1 +1,1 @@
-cd C:\Desktop\& env\Scripts\activate & python main.py & deactivate
+cd C:\Users\Desktop & env\Scripts\activate & python main.py & deactivate

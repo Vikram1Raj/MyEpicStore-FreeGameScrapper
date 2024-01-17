@@ -28,7 +28,7 @@ game_state = driver.find_elements(By.CLASS_NAME, "css-nf3v9d")
 
 try:
   if len(game_title) >= 1:
-    latest_game_state = game_state[4].text
+    latest_game_state = game_state[0].text
     latest_game_title = game_title[0].text
 
     if len(game_title) >= 2:
@@ -59,7 +59,7 @@ try:
       message = f"New game available today: \"*{latest_game_title}*\" until _{availability_datetime}_ and the next game \"*{next_game_title}*\" will be available in _{DaysDifference}days_"
 
       try:
-        kit.sendwhatmsg_instantly("+Number", message)
+        kit.sendwhatmsg_instantly("+Num", message)
         time.sleep(1.8)
         pag.click(1723,998)
         logging.info("Message sent successfully.")
